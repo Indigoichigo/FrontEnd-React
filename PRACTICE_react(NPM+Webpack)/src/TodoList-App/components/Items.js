@@ -21,3 +21,4 @@ const Items = (props) => {
 };
 
 export default Items 
+  let c = 10;

@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const Item = (props) => {
     return(
         <div className="item">
@@ -12,7 +11,7 @@ const Item = (props) => {
                 Remove
             </p>
         </div>
-    )
+    );
 };
 
-export default Item
+export default Item;
