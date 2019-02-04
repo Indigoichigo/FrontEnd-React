@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import AppSeason from './appSeason/AppSeason';
+// import AppSeason from './appSeason/AppSeason';
+// import AppPics from './appPics/AppPics';
+import AppMedia from './appMedia/AppMedia';
 
-ReactDOM.render(<AppSeason />, document.querySelector('#root'));
+ReactDOM.render(<AppMedia />, document.querySelector('#root'));
