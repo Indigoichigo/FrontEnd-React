@@ -1,0 +1,21 @@
+.add_item {
+  background-color: #fff;
+  height: 30px;
+  position: relative;
+}
+
+.add_item_input {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  outline: 0px;
+  border: 0px solid transparent;
+  padding: 5px;
+}
+
+.err_msg_text {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  color: #f00;
+}

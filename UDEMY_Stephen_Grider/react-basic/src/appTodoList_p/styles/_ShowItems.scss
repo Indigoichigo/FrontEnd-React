@@ -1,0 +1,29 @@
+.show_items {
+  background-color: #fff;
+  margin-top: 15px;
+  height: 250px;
+  box-sizing: border-box;
+  padding: 5px;
+  overflow: auto;
+}
+
+.todo_item {
+  line-height: 30px;
+  margin: 5px 0;
+}
+
+.delete_btn,
+.delete_all_btn {
+  float: right;
+  box-sizing: border-box;
+  padding: 5px;
+  border: 0 transparent;
+  background-color: #ddd;
+  border-radius: 3px;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: #222;
+    color: #fff;
+  }
+}
