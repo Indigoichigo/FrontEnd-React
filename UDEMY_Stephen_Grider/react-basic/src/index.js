@@ -18,13 +18,29 @@ import ReactDOM from 'react-dom';
 // import { createStore } from 'redux';
 // import AppSong from './appSong/AppSong';
 // import reducers from './appSong/reducers';
-
 // ReactDOM.render(
 //   <Provider store={createStore(reducers)}>
 //     <AppSong />
 //   </Provider>,
 //   document.querySelector('#root')
 // );
+
+// AppSimpleBlog(redux-thunk)
+
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import AppSimpleBlog from './appSimpleBlog/AppSimpleBlog';
+import reducers from './appSimpleBlog/reducers';
+
+const store = createStore(reducers, applyMiddleware(thunk));
+
+ReactDOM.render(
+  <Provider store={store}>
+    <AppSimpleBlog />
+  </Provider>,
+  document.querySelector('#root')
+);
 
 // AppTodoList - practice
 // import { Provider } from 'react-redux';
@@ -39,5 +55,5 @@ import ReactDOM from 'react-dom';
 // );
 
 //AppClient
-import AppClient from './appClient/AppClient';
-ReactDOM.render(<AppClient />, document.querySelector('#root'));
+// import AppClient from './appClient/AppClient';
+// ReactDOM.render(<AppClient />, document.querySelector('#root'));
