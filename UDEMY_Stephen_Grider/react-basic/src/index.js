@@ -25,22 +25,21 @@ import ReactDOM from 'react-dom';
 //   document.querySelector('#root')
 // );
 
-// AppSimpleBlog(redux-thunk)
+// AppSimpleBlog(redux-thunk & redux with async)
+// import { Provider } from 'react-redux';
+// import { createStore, applyMiddleware } from 'redux';
+// import thunk from 'redux-thunk';
+// import AppSimpleBlog from './appSimpleBlog/AppSimpleBlog';
+// import reducers from './appSimpleBlog/reducers';
 
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import AppSimpleBlog from './appSimpleBlog/AppSimpleBlog';
-import reducers from './appSimpleBlog/reducers';
+// const store = createStore(reducers, applyMiddleware(thunk));
 
-const store = createStore(reducers, applyMiddleware(thunk));
-
-ReactDOM.render(
-  <Provider store={store}>
-    <AppSimpleBlog />
-  </Provider>,
-  document.querySelector('#root')
-);
+// ReactDOM.render(
+//   <Provider store={store}>
+//     <AppSimpleBlog />
+//   </Provider>,
+//   document.querySelector('#root')
+// );
 
 // AppTodoList - practice
 // import { Provider } from 'react-redux';
@@ -55,5 +54,31 @@ ReactDOM.render(
 // );
 
 //AppClient
-// import AppClient from './appClient/AppClient';
-// ReactDOM.render(<AppClient />, document.querySelector('#root'));
+import AppClient from './appClient/AppClient';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
+import reducers from './appClient/reducers';
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)));
+
+ReactDOM.render(
+  <Provider store={store}>
+    <AppClient />
+  </Provider>,
+  document.querySelector('#root')
+);
+
+// AppRedux_p
+// import { Provider } from 'react-redux';
+// import { createStore } from 'redux';
+// import AppRedux from './appRedux_p/AppRedux';
+// import reducers from './appRedux_p/reducers';
+
+// ReactDOM.render(
+//   <Provider store={createStore(reducers)}>
+//     <AppRedux />
+//   </Provider>,
+//   document.querySelector('#root')
+// );
