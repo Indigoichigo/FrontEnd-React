@@ -67,7 +67,7 @@ ReactDOM.render(
   <Provider store={store}>
     <AppClient />
   </Provider>,
-  document.querySelector('#root')
+  document.querySelector('#root'),
 );
 
 // AppRedux_p
