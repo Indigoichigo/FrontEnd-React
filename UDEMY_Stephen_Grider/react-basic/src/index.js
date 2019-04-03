@@ -54,21 +54,21 @@ import ReactDOM from 'react-dom';
 // );
 
 //AppClient
-import AppClient from './appClient/AppClient';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
-import reducers from './appClient/reducers';
+// import AppClient from './appClient/AppClient';
+// import { Provider } from 'react-redux';
+// import { createStore, applyMiddleware, compose } from 'redux';
+// import thunk from 'redux-thunk';
+// import reducers from './appClient/reducers';
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)));
+// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+// const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)));
 
-ReactDOM.render(
-  <Provider store={store}>
-    <AppClient />
-  </Provider>,
-  document.querySelector('#root'),
-);
+// ReactDOM.render(
+//   <Provider store={store}>
+//     <AppClient />
+//   </Provider>,
+//   document.querySelector('#root'),
+// );
 
 // AppRedux_p
 // import { Provider } from 'react-redux';
@@ -82,3 +82,11 @@ ReactDOM.render(
 //   </Provider>,
 //   document.querySelector('#root')
 // );
+
+// AppLangSwitch
+// import AppLangSwitch from './appLangSwitch/AppLangSwitch';
+// ReactDOM.render(<AppLangSwitch />, document.querySelector('#root'));
+
+// AppLangSwitch
+import AppHook from './appHook/AppHook';
+ReactDOM.render(<AppHook />, document.querySelector('#root'));
